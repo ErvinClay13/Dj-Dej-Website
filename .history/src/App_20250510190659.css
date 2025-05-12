@@ -1,0 +1,26 @@
+.hero-overlay::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    #8c52ff 25%,
+    transparent 50%,
+    #8c52ff 75%,
+    transparent 100%
+  );
+  animation: spin-ring 3s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+
+  /* Create a border ring using masking */
+  mask:
+    radial-gradient(farthest-side, transparent calc(100% - 3px), black 100%) center/100% 100% no-repeat;
+  -webkit-mask:
+    radial-gradient(farthest-side, transparent calc(100% - 3px), black 100%) center/100% 100% no-repeat;
+}
+
+
+

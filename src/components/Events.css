@@ -1,0 +1,86 @@
+.events-section {
+  background-color: #111;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.events-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.events-title:hover {
+  color: #8c52ff;
+}
+
+.flyer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.flyer-card {
+  width: 300px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(140, 82, 255, 0.4);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.flyer-card:hover {
+  transform: scale(1.03);
+}
+
+.flyer-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.flyer-card p {
+  margin: 0.75rem 0;
+  color: #ccc;
+  font-weight: bold;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.modal-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 20px #8c52ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flyer-card {
+    width: 90%;
+  }
+
+  .flyer-card img {
+    height: auto;
+  }
+}
