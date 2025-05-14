@@ -3,9 +3,9 @@ import "./Gallery.css";
 
 const mediaItems = [
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image1.png` },
-  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image2.png` },
+  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image.png` },
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image3.png` },
-  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image1.png` },
+  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image4.png` },
 
   { type: "video", src: "/gallery/video1.mp4" },
   { type: "video", src: "/gallery/video2.mp4" },
