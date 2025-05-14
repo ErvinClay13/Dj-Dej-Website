@@ -50,7 +50,7 @@ const App = () => {
       </header>
 
       {/* Info Sections */}
-      <section className="info-section" id="about">
+      <section className="info-section" id="about1">
         <div className="info-block">
           <h2>ABOUT</h2>
           <div className={`text-collapse ${showFullAbout ? "expanded" : ""}`}>
