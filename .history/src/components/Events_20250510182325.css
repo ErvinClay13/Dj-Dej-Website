@@ -1,0 +1,47 @@
+.events-section {
+    background-color: #111;
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .events-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+
+  .events-title:hover {
+
+  }
+  
+  .flyer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .flyer-card {
+    width: 300px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(140, 82, 255, 0.4);
+    text-align: center;
+  }
+  
+  .flyer-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .flyer-card p {
+    margin: 0.75rem 0;
+    color: #ccc;
+    font-weight: bold;
+  }
+  

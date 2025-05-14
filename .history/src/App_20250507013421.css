@@ -1,0 +1,283 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: white;
+}
+
+.main-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('/hero.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  text-align: center;
+}
+
+.dj-name {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #00e5ff;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.date {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.btn.dark {
+  background-color: #222;
+  color: white;
+}
+
+.btn.light {
+  background-color: #00e5ff;
+  color: black;
+}
+
+/* Info Sections */
+.info-section {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1a1a1a;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  max-width: 300px;
+  text-align: center;
+}
+
+.info-block h2 {
+  color: #00e5ff;
+}
+
+.info-block a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.info-block a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* App.css */
+
+/* body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.soundcloud-embed {
+  max-width: 600px;
+  width: 100%;
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #ff5500;
+} */
+
+
+
+
+
+/* Split layout styles */
+/* .app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-section {
+  width: 25%;
+  position: relative;
+  background: black;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-section {
+  width: 75%;
+  height: 100vh;
+  overflow-y: scroll;
+  background: #111;
+  color: white;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.soundcloud-embed {
+  max-width: 600px;
+  width: 100%;
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  color: #ff5500;
+} */
