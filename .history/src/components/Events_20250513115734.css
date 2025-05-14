@@ -85,13 +85,4 @@
   }
 }
 
-.text-collapse {
-  max-height: 100px;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-}
-
-.text-collapse.expanded {
-  max-height: 1000px; /* Large enough to show full text */
-}
 

@@ -15,7 +15,7 @@ function ContactMe() {
   });
 
   const [emailPlaceholder] = useTypewriter({
-    words: ["Enter your email here", "Kindly share your email here!"],
+    words: ["Enter your email here", "Please type in your"],
     loop: true,
     typeSpeed: 50,
     deleteSpeed: 30,

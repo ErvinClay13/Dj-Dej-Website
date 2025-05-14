@@ -60,9 +60,7 @@ const App = () => {
             <img src="/logo.png" alt="DJ DEJ Logo" className="logo-img2" />
           </div>
           <div className="hero-buttons">
-            <a href="#contact" className="btn light">
-              BOOK ME
-            </a>
+            <button className="btn light">BOOK ME</button>
           </div>
         </div>
       </header>

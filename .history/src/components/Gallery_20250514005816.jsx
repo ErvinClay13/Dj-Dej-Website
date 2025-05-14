@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import "./Gallery.css";
 
 const mediaItems = [
-  { type: "image", src: "/gallery/image1.png" },
-  { type: "image", src: "/gallery/image2.png" },
-  { type: "image", src: "/gallery/image3.png" },
-  { type: "image", src: "/gallery/image4.png" },
+  { type: "image", src: "/gallery/image1.jpg" },
+  { type: "image", src: "/gallery/image2.jpg" },
   { type: "video", src: "/gallery/video1.mp4" },
   { type: "video", src: "/gallery/video2.mp4" },
   // Add more as needed

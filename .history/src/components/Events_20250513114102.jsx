@@ -14,7 +14,7 @@ const events = [
   { title: "Litmas 2024", img: "/flyers/flyer10.png" },
   { title: "Valentine's Day Comedy Show", img: "/flyers/flyer11.png" },
   { title: "Clay's Anniversary Party", img: "/flyers/flyer12.png" },
-  { title: "Wellness Health Fair", img: "/flyers/flyer13.png" },
+  { title: "Wellns", img: "/flyers/flyer13.png" },
 ];
 
 const Events = () => {

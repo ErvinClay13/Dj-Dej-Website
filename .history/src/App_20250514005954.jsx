@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import ContactMe from "./components/ContactMe";
 import Events from "./components/Events";
-import Gallery from "./components/Gallery";
+
 import "./App.css";
 
 const App = () => {
@@ -60,9 +60,7 @@ const App = () => {
             <img src="/logo.png" alt="DJ DEJ Logo" className="logo-img2" />
           </div>
           <div className="hero-buttons">
-            <a href="#contact" className="btn light">
-              BOOK ME
-            </a>
+            <button className="btn light">BOOK ME</button>
           </div>
         </div>
       </header>
@@ -74,38 +72,29 @@ const App = () => {
           <h2>ABOUT</h2>
           <div className={`text-collapse ${showFullAbout ? "expanded" : ""}`}>
             <p>
-              DJ Dej is one of Chicago’s freshest faces in the DJ scene,
-              bringing rhythm, soul, and pure energy to every event she touches.
-              A lifelong lover of music and a proud percussionist from her high
-              school drumline, DJ Dej’s journey into the world of DJing started
-              the way all great stories do—at the request of friends and family
-              who trusted her to set the vibe. And she delivered.
+              DJ Dej is one of Chicago’s freshest faces in the DJ scene, bringing rhythm, soul,
+              and pure energy to every event she touches. A lifelong lover of music and a proud
+              percussionist from her high school drumline, DJ Dej’s journey into the world of DJing
+              started the way all great stories do—at the request of friends and family who trusted
+              her to set the vibe. And she delivered.
               {showFullAbout && (
                 <>
                   <br />
-                  Since her official debut in 2023 at Litmas V: The Debut of DJ
-                  Dej, she’s been making waves across Chicago at venues like
-                  Bar22, Williams Inn Pizza & Sports Bar, and Bassline. Known
-                  for her seamless blends of house, steppin’ grooves, R&B, and
-                  hip-hop, DJ Dej creates soundscapes that move
-                  people—literally. Her sets are soulful, upbeat, and rooted in
-                  genres like gospel, neo-soul, afrobeats, amapiano, reggae,
-                  pop, and Top 100 hits.
+                  Since her official debut in 2023 at Litmas V: The Debut of DJ Dej, she’s been making waves
+                  across Chicago at venues like Bar22, Williams Inn Pizza & Sports Bar, and Bassline. Known
+                  for her seamless blends of house, steppin’ grooves, R&B, and hip-hop, DJ Dej creates soundscapes
+                  that move people—literally. Her sets are soulful, upbeat, and rooted in genres like gospel,
+                  neo-soul, afrobeats, amapiano, reggae, pop, and Top 100 hits.
                   <br />
-                  Whether it’s a birthday party, wedding, prom, graduation,
-                  corporate event, or bar night, DJ Dej brings a vibrant,
-                  stress-free experience that keeps the dance floor full all
-                  night long.
+                  Whether it’s a birthday party, wedding, prom, graduation, corporate event, or bar night, DJ Dej
+                  brings a vibrant, stress-free experience that keeps the dance floor full all night long.
                   <br />
-                  Born with rhythm, backed by education, and driven by passion,
-                  DJ Dej holds a B.S. in Criminal Justice from Alabama State
-                  University and an M.S. in Human Resources from DePaul
-                  University. She’s also a proud lifetime member of Delta Sigma
-                  Theta Sorority, Inc.
+                  Born with rhythm, backed by education, and driven by passion, DJ Dej holds a B.S. in Criminal
+                  Justice from Alabama State University and an M.S. in Human Resources from DePaul University. She’s
+                  also a proud lifetime member of Delta Sigma Theta Sorority, Inc.
                   <br />
-                  When you book DJ Dej, you’re not just hiring a DJ—you’re
-                  curating a vibe. Expect professionalism, authenticity, and
-                  music that speaks to the soul.
+                  When you book DJ Dej, you’re not just hiring a DJ—you’re curating a vibe. Expect professionalism,
+                  authenticity, and music that speaks to the soul.
                 </>
               )}
             </p>
@@ -124,20 +113,18 @@ const App = () => {
         {/* SERVICES */}
         <div className="info-block" id="service">
           <h2>SERVICE</h2>
-          <div
-            className={`text-collapse ${showFullServices ? "expanded" : ""}`}
-          >
+          <div className={`text-collapse ${showFullServices ? "expanded" : ""}`}>
             <p>
               Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
               Phasellus viverra nulla ut metus varius.
               {showFullServices && (
                 <>
                   <br />
-                  Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                  tellus. Phasellus viverra nulla ut metus varius.
+                  Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                  Phasellus viverra nulla ut metus varius.
                   <br />
-                  Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                  tellus. Phasellus viverra nulla ut metus varius.
+                  Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+                  Phasellus viverra nulla ut metus varius.
                 </>
               )}
             </p>
@@ -197,10 +184,6 @@ const App = () => {
         <Events />
       </div>
 
-      <div id="gallery">
-        <Gallery />
-      </div>
-
       {/* Contact Section */}
       <div id="contact">
         <ContactMe />
@@ -212,6 +195,26 @@ const App = () => {
 };
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // // DJ Portfolio - React + Plain CSS Full Layout (Hero + Sections)
 
@@ -289,22 +292,22 @@ export default App;
 //         <div className="info-block">
 //           <h2>ABOUT</h2>
 //           <p>
-//           DJ Dej is one of Chicago’s freshest faces in the DJ scene, bringing rhythm, soul,
-//           and pure energy to every event she touches. A lifelong lover of music and a proud
-//           percussionist from her high school drumline, DJ Dej’s journey into the world of DJing
-//           started the way all great stories do—at the request of friends and family who trusted
+//           DJ Dej is one of Chicago’s freshest faces in the DJ scene, bringing rhythm, soul, 
+//           and pure energy to every event she touches. A lifelong lover of music and a proud 
+//           percussionist from her high school drumline, DJ Dej’s journey into the world of DJing 
+//           started the way all great stories do—at the request of friends and family who trusted 
 //           her to set the vibe. And she delivered.
-//           Since her official debut in 2023 at Litmas V: The Debut of DJ Dej, she’s been making waves
-//           across Chicago at venues like Bar22, Williams Inn Pizza & Sports Bar, and Bassline. Known
-//           for her seamless blends of house, steppin’ grooves, R&B, and hip-hop, DJ Dej creates soundscapes
-//           that move people—literally. Her sets are soulful, upbeat, and rooted in genres like gospel,
+//           Since her official debut in 2023 at Litmas V: The Debut of DJ Dej, she’s been making waves 
+//           across Chicago at venues like Bar22, Williams Inn Pizza & Sports Bar, and Bassline. Known 
+//           for her seamless blends of house, steppin’ grooves, R&B, and hip-hop, DJ Dej creates soundscapes 
+//           that move people—literally. Her sets are soulful, upbeat, and rooted in genres like gospel, 
 //           neo-soul, afrobeats, amapiano, reggae, pop, and Top 100 hits.
-//           Whether it’s a birthday party, wedding, prom, graduation, corporate event, or bar night, DJ Dej
+//           Whether it’s a birthday party, wedding, prom, graduation, corporate event, or bar night, DJ Dej 
 //           brings a vibrant, stress-free experience that keeps the dance floor full all night long.
-//           Born with rhythm, backed by education, and driven by passion, DJ Dej holds a B.S. in Criminal
-//           Justice from Alabama State University and an M.S. in Human Resources from DePaul University. She’s
+//           Born with rhythm, backed by education, and driven by passion, DJ Dej holds a B.S. in Criminal 
+//           Justice from Alabama State University and an M.S. in Human Resources from DePaul University. She’s 
 //           also a proud lifetime member of Delta Sigma Theta Sorority, Inc.
-//           When you book DJ Dej, you’re not just hiring a DJ—you’re curating a vibe. Expect professionalism,
+//           When you book DJ Dej, you’re not just hiring a DJ—you’re curating a vibe. Expect professionalism, 
 //           authenticity, and music that speaks to the soul.
 //           </p>
 //           <a href="#">read more</a>
@@ -323,7 +326,7 @@ export default App;
 //           </p>
 //           <a href="#">read more</a>
 //         </div>
-
+      
 //       </section>
 
 //       {/* Mixes Section */}
@@ -380,3 +383,4 @@ export default App;
 // };
 
 // export default App;
+

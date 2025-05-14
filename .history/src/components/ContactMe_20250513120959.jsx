@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import "./ContactMe.css";
+import "./ContactMe.css"; // Keep your current styles
 
 function ContactMe() {
   const form = useRef();
@@ -15,7 +15,7 @@ function ContactMe() {
   });
 
   const [emailPlaceholder] = useTypewriter({
-    words: ["Enter your email here", "Kindly share your email here!"],
+    words: ["Enter your email here", "We'll respond here!"],
     loop: true,
     typeSpeed: 50,
     deleteSpeed: 30,
