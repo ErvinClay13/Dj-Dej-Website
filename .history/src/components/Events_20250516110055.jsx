@@ -15,7 +15,7 @@ const events = [
   { title: "Valentine's Day Comedy Show", img: `${import.meta.env.BASE_URL}flyers/flyer11.png` },
   { title: "Clay's Anniversary Party", img: `${import.meta.env.BASE_URL}flyers/flyer12.png` },
   { title: "Wellness Health Fair", img: `${import.meta.env.BASE_URL}flyers/flyer13.png` },
-  { title: "Torreys 51st Birthday", img: `${import.meta.env.BASE_URL}flyers/flyer14.png` },
+  { title: "Wellness Health Fair", img: `${import.meta.env.BASE_URL}flyers/flyer14.png` },
 ];
 
 
