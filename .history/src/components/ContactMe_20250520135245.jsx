@@ -99,7 +99,7 @@ function ContactMe() {
         {/* reCAPTCHA Box (VISIBLE + styled) */}
         <div style={{ margin: "1.5rem auto", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
-            sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F"
+            sitekey="YOUR_SITE_KEY_HERE"
             onChange={() => setIsHuman(true)}
             onExpired={() => setIsHuman(false)}
           />
