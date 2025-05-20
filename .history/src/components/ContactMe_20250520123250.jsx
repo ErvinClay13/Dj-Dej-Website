@@ -33,15 +33,10 @@ function ContactMe() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_3khdmx7", "template_jrua9ll", form.current, "uoarmldLmdgLK6Idq")
-      .then(() => {
-        alert("Booking request sent successfully!");
-        form.current.reset();
+      .sendForm("service_3khdmx7", "template_eso2v3n", form.current, {
+        publicKey: "nXe5clY5imZRjmuNb",
       })
-      .catch((error) => {
-        console.error("FAILED...", error.text);
-        alert("Something went wrong. Please try again.");
-      });
+      .then(() => console.log("SUCCESS!"), (error) => console.log("FAILED...", error.text));
   };
 
   return (
@@ -93,7 +88,6 @@ function ContactMe() {
 }
 
 export default ContactMe;
-
 
 
 

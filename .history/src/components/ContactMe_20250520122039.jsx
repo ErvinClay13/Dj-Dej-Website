@@ -33,15 +33,10 @@ function ContactMe() {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_3khdmx7", "template_jrua9ll", form.current, "uoarmldLmdgLK6Idq")
-      .then(() => {
-        alert("Booking request sent successfully!");
-        form.current.reset();
+      .sendForm("service_spzbvv5", "template_eso2v3n", form.current, {
+        publicKey: "nXe5clY5imZRjmuNb",
       })
-      .catch((error) => {
-        console.error("FAILED...", error.text);
-        alert("Something went wrong. Please try again.");
-      });
+      .then(() => console.log("SUCCESS!"), (error) => console.log("FAILED...", error.text));
   };
 
   return (
@@ -76,7 +71,7 @@ function ContactMe() {
           <input type="number" name="guest_count" placeholder="Estimated Guest Count" required />
         </div>
         <div className="row">
-          <select name="referral" required>
+          <select name="referral_source" required>
             <option value="">How did you hear about me?</option>
             <option value="Instagram">Instagram</option>
             <option value="Referral">Referral</option>
@@ -93,7 +88,6 @@ function ContactMe() {
 }
 
 export default ContactMe;
-
 
 
 
