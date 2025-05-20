@@ -100,7 +100,7 @@ function ContactMe() {
           </select>
         </div>
         <textarea name="message" placeholder={messagePlaceholder} required />
-        {/* <Cursor /> */}
+        <Cursor />
 
         {/* reCAPTCHA visible above button */}
         <div className="recaptcha" style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>

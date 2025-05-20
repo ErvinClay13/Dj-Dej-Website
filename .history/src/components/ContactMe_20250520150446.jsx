@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReCAPTCHA from "react-google-recaptcha"; // ✅ Make sure this is installed
 import "./ContactMe.css";
-
+cursor
 function ContactMe() {
   const form = useRef();
   const [verified, setVerified] = useState(false);

@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import ReCAPTCHA from "react-google-recaptcha"; // ✅ Make sure this is installed
 import "./ContactMe.css";
-
+span
 function ContactMe() {
   const form = useRef();
   const [verified, setVerified] = useState(false);
@@ -100,10 +100,10 @@ function ContactMe() {
           </select>
         </div>
         <textarea name="message" placeholder={messagePlaceholder} required />
-        {/* <Cursor /> */}
+        <Cursor />
 
-        {/* reCAPTCHA visible above button */}
-        <div className="recaptcha" style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
+        {/* ✅ reCAPTCHA visible above button */}
+        <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
             sitekey="6LewA0IrAAAAAIXP9uzb4PrPsyINtjJ2CGAcFhWl" // 🔁 Replace with your real site key
             onChange={handleRecaptcha}
