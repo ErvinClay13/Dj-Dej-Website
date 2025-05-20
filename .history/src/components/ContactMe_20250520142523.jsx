@@ -105,7 +105,7 @@ function ContactMe() {
         {/* ✅ reCAPTCHA visible above button */}
         <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
-            sitekey="6LewA0IrAAAAAIXP9uzb4PrPsyINtjJ2CGAcFhWl" // 🔁 Replace with your real site key
+            sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F" // 🔁 Replace with your real site key
             onChange={handleRecaptcha}
           />
         </div>
