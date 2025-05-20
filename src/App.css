@@ -92,7 +92,7 @@ body {
 .hero {
   width: 100vw;
   min-height: 70vh;
-  background: url('/hero.jpg') center/cover no-repeat;
+  background: url('/hero.jpg') center/contain no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

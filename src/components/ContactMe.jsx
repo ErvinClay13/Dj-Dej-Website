@@ -43,7 +43,7 @@ function ContactMe() {
     <div className="formContainer">
       <h1>Booking Inquiry</h1>
       <p className="contact-instructions">
-        Feel free to contact me via the form below or call/text 312-801-6128.
+        Feel free to contact me via the form below.
       </p>
 
       <form ref={form} onSubmit={sendEmail} className="styled-contact-form">

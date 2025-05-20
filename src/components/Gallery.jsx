@@ -5,10 +5,13 @@ const mediaItems = [
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image1.png` },
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image2.png` },
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image3.png` },
-  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image1.png` },
-
-  { type: "video", src: "/gallery/video1.mp4" },
-  { type: "video", src: "/gallery/video2.mp4" },
+  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image4.png` },
+  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image5.png` },
+  { type: "image", src: `${import.meta.env.BASE_URL}gallery/image6.png` },
+  
+ 
+  { type: "video", src: `${import.meta.env.BASE_URL}gallery/video1.mp4` },
+  { type: "video", src: `${import.meta.env.BASE_URL}gallery/video2.mp4` },
   // Add more as needed
 ];
 

@@ -93,36 +93,6 @@ const App = () => {
             {showFullAbout ? "read less" : "read more"}
           </a>
         </div>
-
-        {/* SERVICES */}
-        <div className="info-block" id="service">
-          <h2>SERVICE</h2>
-          <div className={`text-collapse ${showFullServices ? "expanded" : ""}`}>
-            <p>
-              Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
-              Phasellus viverra nulla ut metus varius.
-              {showFullServices && (
-                <>
-                  <br />
-                  Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                  tellus. Phasellus viverra nulla ut metus varius.
-                  <br />
-                  Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
-                  tellus. Phasellus viverra nulla ut metus varius.
-                </>
-              )}
-            </p>
-          </div>
-          <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              setShowFullServices(!showFullServices);
-            }}
-          >
-            {showFullServices ? "read less" : "read more"}
-          </a>
-        </div>
       </section>
 
       {/* Mixes Section */}
