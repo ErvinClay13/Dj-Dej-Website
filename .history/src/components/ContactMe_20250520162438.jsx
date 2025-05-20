@@ -61,10 +61,7 @@ function ContactMe() {
     }
 
     emailjs
-      // .sendForm("service_3khdmx7", "template_jrua9ll", form.current, {
-      //   publicKey: "uoarmldLmdgLK6Idq",
-
-      .sendForm("service_1ecvu9k", "template_bs8s2z2", form.current, {
+      .sendForm("service_3khdmx7", "template_jrua9ll", form.current, {
         publicKey: "uoarmldLmdgLK6Idq",
       })
       .then(() => {
