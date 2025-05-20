@@ -105,7 +105,7 @@ function ContactMe() {
         {/* ✅ reCAPTCHA visible above button */}
         <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
-            sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F" // 🔁 Replace with your real site key
+            sitekey="YOUR_SITE_KEY" // 🔁 Replace with your real site key
             onChange={handleRecaptcha}
           />
         </div>
@@ -124,6 +124,9 @@ export default ContactMe;
 
 
 
+
+
+sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F"
 
 
 // import React, { useRef } from "react";

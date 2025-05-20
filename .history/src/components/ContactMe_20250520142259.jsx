@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import ReCAPTCHA from "react-google-recaptcha"; // ✅ Make sure this is installed
 import "./ContactMe.css";
 
 function ContactMe() {
   const form = useRef();
-  const [verified, setVerified] = useState(false);
+  const [isHuman, setIsHuman] = useState(false);
 
   const [namePlaceholder] = useTypewriter({
     words: ["First name", "Enter your first name"],
@@ -32,30 +32,24 @@ function ContactMe() {
     delaySpeed: 1000,
   });
 
-  const handleRecaptcha = (token) => {
-    setVerified(!!token);
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!verified) {
-      alert("Please complete the reCAPTCHA to verify you're human.");
+    if (!isHuman) {
+      alert("Please verify you're human.");
       return;
     }
 
     emailjs
-      .sendForm("service_3khdmx7", "template_jrua9ll", form.current, {
-        publicKey: "uoarmldLmdgLK6Idq",
-      })
+      .sendForm("service_3khdmx7", "template_jrua9ll", form.current, "uoarmldLmdgLK6Idq")
       .then(() => {
         alert("Booking request sent successfully!");
         form.current.reset();
-        setVerified(false); // Reset reCAPTCHA
+        setIsHuman(false);
       })
       .catch((error) => {
-        console.log("FAILED...", error.text);
-        alert("There was an error sending your request. Please try again.");
+        console.error("FAILED...", error.text);
+        alert("Something went wrong. Please try again.");
       });
   };
 
@@ -102,17 +96,16 @@ function ContactMe() {
         <textarea name="message" placeholder={messagePlaceholder} required />
         <Cursor />
 
-        {/* ✅ reCAPTCHA visible above button */}
-        <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
+        {/* reCAPTCHA Box (VISIBLE + styled) */}
+        <div style={{ margin: "1.5rem auto", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
-            sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F" // 🔁 Replace with your real site key
-            onChange={handleRecaptcha}
+            sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F"
+            onChange={() => setIsHuman(true)}
+            onExpired={() => setIsHuman(false)}
           />
         </div>
 
-        <button type="submit" disabled={!verified}>
-          Submit
-        </button>
+        <button type="submit" disabled={!isHuman}>Submit</button>
       </form>
     </div>
   );
@@ -124,6 +117,8 @@ export default ContactMe;
 
 
 
+
+sitekey="6Lei60ErAAAAALfiBeEwSs_mV4LjjZoGtjxrDD7F"
 
 
 // import React, { useRef } from "react";
