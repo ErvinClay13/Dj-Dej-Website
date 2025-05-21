@@ -69,7 +69,7 @@ function ContactMe() {
     userEmailInput.value = email;
 
     emailjs
-      .sendForm("service_1ecvu9k", "template_bs8s2z2", form.current, {
+      .sendForm("service_3khdmx7", "template_bs8s2z2", form.current, {
         publicKey: "uoarmldLmdgLK6Idq",
       })
       .then(() => {
