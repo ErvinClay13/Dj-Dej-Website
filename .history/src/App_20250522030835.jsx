@@ -33,7 +33,7 @@ const App = () => {
   <li><a href="#about" onClick={() => setShowMenu(false)}>About</a></li>
   <li><a href="#mixes" onClick={() => setShowMenu(false)}>Mixes</a></li>
   <li><a href="#events" onClick={() => setShowMenu(false)}>Events</a></li>
-  <li><a href="#gallery" onClick={() => setShowMenu(false)}>Gallery</a></li>
+  <li><a href="#gallery" onClick={() => setShowMenu(false)}>Gallery</a></li> {/* ✅ new */}
   <li><a href="#contact" onClick={() => setShowMenu(false)}>Book Me</a></li>
 </ul>
 
