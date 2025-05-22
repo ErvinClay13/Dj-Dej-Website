@@ -21,8 +21,10 @@ function ContactMe() {
 
     const formEl = form.current;
 
+    // Grab form values
     const name = `${formEl["first_name"].value} ${formEl["last_name"].value}`;
     const email = formEl["email"].value;
+    const title = "New Booking Inquiry";
 
     const message = `
       Phone: ${formEl["phone"].value}
@@ -34,24 +36,24 @@ function ContactMe() {
       Message: ${formEl["message"].value}
     `;
 
-    // Remove any previous hidden fields
-    ["name", "email", "message"].forEach((field) => {
-      const existing = formEl.querySelector(`input[name='${field}']`);
-      if (existing) existing.remove();
-    });
+    // Dynamically set the hidden fields for EmailJS
+    formEl["name"]?.remove();
+    formEl["email_field"]?.remove();
+    formEl["title"]?.remove();
+    formEl["compiled_message"]?.remove();
 
-    // Dynamically add hidden inputs
-    const hiddenInputs = [
+    const hiddenFields = [
       { name: "name", value: name },
-      { name: "email", value: email },
-      { name: "message", value: message },
+      { name: "email", value: email, id: "email_field" },
+      { name: "message", value: message, id: "compiled_message" },
     ];
 
-    hiddenInputs.forEach(({ name, value }) => {
+    hiddenFields.forEach(({ name, value, id }) => {
       const input = document.createElement("input");
       input.type = "hidden";
       input.name = name;
       input.value = value;
+      if (id) input.id = id;
       formEl.appendChild(input);
     });
 
@@ -63,7 +65,6 @@ function ContactMe() {
         alert("Booking request sent successfully!");
         formEl.reset();
         setVerified(false);
-        window.grecaptcha?.reset();
       })
       .catch((error) => {
         console.error("FAILED...", error.text);
@@ -78,18 +79,8 @@ function ContactMe() {
 
       <form ref={form} onSubmit={sendEmail} className="styled-contact-form">
         <div className="row">
-          <input
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-            required
-          />
-          <input
-            type="text"
-            name="last_name"
-            placeholder="Last Name"
-            required
-          />
+          <input type="text" name="first_name" placeholder="First Name" required />
+          <input type="text" name="last_name" placeholder="Last Name" required />
         </div>
         <div className="row">
           <input type="email" name="email" placeholder="Email" required />
@@ -97,12 +88,7 @@ function ContactMe() {
         </div>
         <div className="row">
           <input type="date" name="event_date" required />
-          <input
-            type="text"
-            name="venue"
-            placeholder="Event Venue & Location"
-            required
-          />
+          <input type="text" name="venue" placeholder="Event Venue & Location" required />
         </div>
         <div className="row">
           <select name="event_type" required>
@@ -113,12 +99,7 @@ function ContactMe() {
             <option value="Club/Bar">Club/Bar</option>
             <option value="Other">Other</option>
           </select>
-          <input
-            type="number"
-            name="guest_count"
-            placeholder="Estimated Guest Count"
-            required
-          />
+          <input type="number" name="guest_count" placeholder="Estimated Guest Count" required />
         </div>
         <div className="row">
           <select name="referral" required>
@@ -129,19 +110,9 @@ function ContactMe() {
             <option value="Other">Other</option>
           </select>
         </div>
-        <textarea
-          name="message"
-          placeholder="Tell me more about your event..."
-          required
-        />
+        <textarea name="message" placeholder="Tell me more about your event..." required />
 
-        <div
-          style={{
-            marginTop: "1.5rem",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+        <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
             sitekey="6LewA0IrAAAAAIXP9uzb4PrPsyINtjJ2CGAcFhWl"
             onChange={handleRecaptcha}
@@ -158,136 +129,11 @@ function ContactMe() {
 
 export default ContactMe;
 
-// import React, { useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
-// import ReCAPTCHA from "react-google-recaptcha";
-// import "./ContactMe.css";
 
-// function ContactMe() {
-//   const form = useRef();
-//   const [verified, setVerified] = useState(false);
 
-//   const handleRecaptcha = (token) => {
-//     setVerified(!!token);
-//   };
 
-//   const sendEmail = (e) => {
-//     e.preventDefault();
 
-//     if (!verified) {
-//       alert("Please verify that you're human.");
-//       return;
-//     }
 
-//     const formEl = form.current;
-
-//     // Grab form values
-//     const name = `${formEl["first_name"].value} ${formEl["last_name"].value}`;
-//     const email = formEl["email"].value;
-//     const title = "New Booking Inquiry";
-
-//     const message = `
-//       Phone: ${formEl["phone"].value}
-//       Event Type: ${formEl["event_type"].value}
-//       Event Date: ${formEl["event_date"].value}
-//       Venue: ${formEl["venue"].value}
-//       Guest Count: ${formEl["guest_count"].value}
-//       Referral: ${formEl["referral"].value}
-//       Message: ${formEl["message"].value}
-//     `;
-
-//     // Dynamically set the hidden fields for EmailJS
-//     formEl["name"]?.remove();
-//     formEl["email_field"]?.remove();
-//     formEl["title"]?.remove();
-//     formEl["compiled_message"]?.remove();
-
-//     const hiddenFields = [
-//       { name: "name", value: name },
-//       { name: "email", value: email, id: "email_field" },
-//       { name: "message", value: message, id: "compiled_message" },
-//     ];
-
-//     hiddenFields.forEach(({ name, value, id }) => {
-//       const input = document.createElement("input");
-//       input.type = "hidden";
-//       input.name = name;
-//       input.value = value;
-//       if (id) input.id = id;
-//       formEl.appendChild(input);
-//     });
-
-//     emailjs
-//       .sendForm("service_1ecvu9k", "template_7twwnwf", formEl, {
-//         publicKey: "uoarmldLmdgLK6Idq",
-//       })
-//       .then(() => {
-//         alert("Booking request sent successfully!");
-//         formEl.reset();
-//         setVerified(false);
-//       })
-//       .catch((error) => {
-//         console.error("FAILED...", error.text);
-//         alert("There was an error sending your request. Please try again.");
-//       });
-//   };
-
-//   return (
-//     <div className="formContainer">
-//       <h1>Booking Inquiry</h1>
-//       <p>Feel free to contact me via the form below.</p>
-
-//       <form ref={form} onSubmit={sendEmail} className="styled-contact-form">
-//         <div className="row">
-//           <input type="text" name="first_name" placeholder="First Name" required />
-//           <input type="text" name="last_name" placeholder="Last Name" required />
-//         </div>
-//         <div className="row">
-//           <input type="email" name="email" placeholder="Email" required />
-//           <input type="tel" name="phone" placeholder="Phone number" required />
-//         </div>
-//         <div className="row">
-//           <input type="date" name="event_date" required />
-//           <input type="text" name="venue" placeholder="Event Venue & Location" required />
-//         </div>
-//         <div className="row">
-//           <select name="event_type" required>
-//             <option value="">Type of Event</option>
-//             <option value="Birthday">Birthday</option>
-//             <option value="Wedding">Wedding</option>
-//             <option value="Corporate">Corporate</option>
-//             <option value="Club/Bar">Club/Bar</option>
-//             <option value="Other">Other</option>
-//           </select>
-//           <input type="number" name="guest_count" placeholder="Estimated Guest Count" required />
-//         </div>
-//         <div className="row">
-//           <select name="referral" required>
-//             <option value="">How did you hear about me?</option>
-//             <option value="Instagram">Instagram</option>
-//             <option value="Referral">Referral</option>
-//             <option value="Google">Google</option>
-//             <option value="Other">Other</option>
-//           </select>
-//         </div>
-//         <textarea name="message" placeholder="Tell me more about your event..." required />
-
-//         <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
-//           <ReCAPTCHA
-//             sitekey="6LewA0IrAAAAAIXP9uzb4PrPsyINtjJ2CGAcFhWl"
-//             onChange={handleRecaptcha}
-//           />
-//         </div>
-
-//         <button type="submit" disabled={!verified}>
-//           Submit
-//         </button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default ContactMe;
 
 // import React, { useRef, useState } from "react";
 // import emailjs from "@emailjs/browser";
@@ -411,7 +257,11 @@ export default ContactMe;
 
 // export default ContactMe;
 
-("");
+
+
+
+""
+
 
 // import React, { useRef } from "react";
 // import emailjs from "@emailjs/browser";
@@ -509,10 +359,26 @@ export default ContactMe;
 
 // export default ContactMe;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from "react";
 // import { useRef } from "react"; // Hook to reference DOM elements
 // import emailjs from "@emailjs/browser"; // EmailJS for sending form data as email
 // import { useTypewriter, Cursor } from "react-simple-typewriter"; // Typewriter animation effect
+
 
 // // ContactMe component definition
 // function ContactMe() {

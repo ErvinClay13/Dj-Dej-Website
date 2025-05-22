@@ -78,18 +78,8 @@ function ContactMe() {
 
       <form ref={form} onSubmit={sendEmail} className="styled-contact-form">
         <div className="row">
-          <input
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-            required
-          />
-          <input
-            type="text"
-            name="last_name"
-            placeholder="Last Name"
-            required
-          />
+          <input type="text" name="first_name" placeholder="First Name" required />
+          <input type="text" name="last_name" placeholder="Last Name" required />
         </div>
         <div className="row">
           <input type="email" name="email" placeholder="Email" required />
@@ -97,12 +87,7 @@ function ContactMe() {
         </div>
         <div className="row">
           <input type="date" name="event_date" required />
-          <input
-            type="text"
-            name="venue"
-            placeholder="Event Venue & Location"
-            required
-          />
+          <input type="text" name="venue" placeholder="Event Venue & Location" required />
         </div>
         <div className="row">
           <select name="event_type" required>
@@ -113,12 +98,7 @@ function ContactMe() {
             <option value="Club/Bar">Club/Bar</option>
             <option value="Other">Other</option>
           </select>
-          <input
-            type="number"
-            name="guest_count"
-            placeholder="Estimated Guest Count"
-            required
-          />
+          <input type="number" name="guest_count" placeholder="Estimated Guest Count" required />
         </div>
         <div className="row">
           <select name="referral" required>
@@ -129,19 +109,9 @@ function ContactMe() {
             <option value="Other">Other</option>
           </select>
         </div>
-        <textarea
-          name="message"
-          placeholder="Tell me more about your event..."
-          required
-        />
+        <textarea name="message" placeholder="Tell me more about your event..." required />
 
-        <div
-          style={{
-            marginTop: "1.5rem",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
+        <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center" }}>
           <ReCAPTCHA
             sitekey="6LewA0IrAAAAAIXP9uzb4PrPsyINtjJ2CGAcFhWl"
             onChange={handleRecaptcha}
@@ -157,6 +127,11 @@ function ContactMe() {
 }
 
 export default ContactMe;
+
+
+
+
+
 
 // import React, { useRef, useState } from "react";
 // import emailjs from "@emailjs/browser";
@@ -289,6 +264,12 @@ export default ContactMe;
 
 // export default ContactMe;
 
+
+
+
+
+
+
 // import React, { useRef, useState } from "react";
 // import emailjs from "@emailjs/browser";
 // import { useTypewriter, Cursor } from "react-simple-typewriter";
@@ -411,7 +392,11 @@ export default ContactMe;
 
 // export default ContactMe;
 
-("");
+
+
+
+""
+
 
 // import React, { useRef } from "react";
 // import emailjs from "@emailjs/browser";
@@ -509,10 +494,26 @@ export default ContactMe;
 
 // export default ContactMe;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from "react";
 // import { useRef } from "react"; // Hook to reference DOM elements
 // import emailjs from "@emailjs/browser"; // EmailJS for sending form data as email
 // import { useTypewriter, Cursor } from "react-simple-typewriter"; // Typewriter animation effect
+
 
 // // ContactMe component definition
 // function ContactMe() {
