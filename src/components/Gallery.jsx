@@ -8,11 +8,8 @@ const mediaItems = [
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image4.png` },
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image5.png` },
   { type: "image", src: `${import.meta.env.BASE_URL}gallery/image6.png` },
-  
- 
   { type: "video", src: `${import.meta.env.BASE_URL}gallery/video1.mp4` },
-  { type: "video", src: `${import.meta.env.BASE_URL}gallery/video2.mp4` },
-  // Add more as needed
+  { type: "video", src: `${import.meta.env.BASE_URL}gallery/video2.mp4` }
 ];
 
 const Gallery = () => {
@@ -29,7 +26,10 @@ const Gallery = () => {
             {item.type === "image" ? (
               <img src={item.src} alt={`Gallery ${index}`} />
             ) : (
-              <video src={item.src} muted loop playsInline />
+              <>
+                <video src={item.src} muted loop playsInline />
+                <div className="play-icon">▶</div>
+              </>
             )}
           </div>
         ))}
