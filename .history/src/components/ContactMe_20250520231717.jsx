@@ -59,7 +59,7 @@ function ContactMe() {
     });
 
     emailjs
-      .sendForm("service_1ecvu9k", "template_qza6g8o", formEl, {
+      .sendForm("service_1ecvu9k", "template_XXXXXXX", formEl, {
         publicKey: "uoarmldLmdgLK6Idq",
       })
       .then(() => {
