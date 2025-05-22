@@ -24,15 +24,15 @@ function ContactMe() {
     const name = `${formEl["first_name"].value} ${formEl["last_name"].value}`;
     const email = formEl["email"].value;
 
-const message = `
-  <strong>Phone:</strong> ${formEl["phone"].value}<br />
-  <strong>Event Type:</strong> ${formEl["event_type"].value}<br />
-  <strong>Event Date:</strong> ${formEl["event_date"].value}<br />
-  <strong>Venue:</strong> ${formEl["venue"].value}<br />
-  <strong>Guest Count:</strong> ${formEl["guest_count"].value}<br />
-  <strong>Referral:</strong> ${formEl["referral"].value}<br />
-  <strong>Message:</strong> ${formEl["message"].value}
-`;
+    const message = `
+      Phone: ${formEl["phone"].value} <b
+      Event Type: ${formEl["event_type"].value}
+      Event Date: ${formEl["event_date"].value}
+      Venue: ${formEl["venue"].value}
+      Guest Count: ${formEl["guest_count"].value}
+      Referral: ${formEl["referral"].value}
+      Message: ${formEl["message"].value}
+    `;
 
     // Remove any previous hidden fields
     ["name", "email", "message"].forEach((field) => {
