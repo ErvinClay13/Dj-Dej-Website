@@ -24,7 +24,7 @@ function ContactMe() {
     const name = `${formEl["first_name"].value} ${formEl["last_name"].value}`;
     const email = formEl["email"].value;
 
-    const message = `
+const message = `
 Phone: ${formEl["phone"].value}
 Event Type: ${formEl["event_type"].value}
 Event Date: ${formEl["event_date"].value}

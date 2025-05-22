@@ -24,14 +24,14 @@ function ContactMe() {
     const name = `${formEl["first_name"].value} ${formEl["last_name"].value}`;
     const email = formEl["email"].value;
 
-    const message = `
-Phone: ${formEl["phone"].value}
-Event Type: ${formEl["event_type"].value}
-Event Date: ${formEl["event_date"].value}
-Venue: ${formEl["venue"].value}
-Guest Count: ${formEl["guest_count"].value}
-Referral: ${formEl["referral"].value}
-Message: ${formEl["additional_details"].value}
+const message = `
+  Phone: ${formEl["phone"].value}<br />
+  Event Type: ${formEl["event_type"].value}<br />
+  Event Date: ${formEl["event_date"].value}<br />
+  Venue: ${formEl["venue"].value}<br />
+  Guest Count: ${formEl["guest_count"].value}<br />
+  Referral: ${formEl["referral"].value}<br />
+  Message: ${formEl["message"].value}
 `;
 
     // Remove any previous hidden fields
