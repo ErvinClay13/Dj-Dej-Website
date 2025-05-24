@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import ContactMe from "./components/ContactMe";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
@@ -151,10 +150,9 @@ const App = () => {
         <ContactMe />
       </div>
 
-            <Footer />
-      {/* <footer>
-        © 2025 Dj Dej | Powered by Ape Code
-      </footer> */}
+      <footer>
+        © 2025 Dj Dej | Powered by ApeCode
+      </footer>
     </div>
   );
 };

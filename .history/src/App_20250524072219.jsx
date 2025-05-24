@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import ContactMe from "./components/ContactMe";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
+import F
 import "./App.css";
 
 const App = () => {
