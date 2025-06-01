@@ -1,0 +1,96 @@
+.reviews-section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reviews-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.reviews-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  /* box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08); */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px; /* Constrain total card height */
+  overflow: hidden;
+  position: relative;
+}
+
+.review-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  border: 2px solid #ddd;
+}
+
+.review-stars {
+  color: #fbc02d;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 12px;
+  max-height: 100px;       /* Limit text height */
+  overflow-y: auto;        /* Enable scroll if text overflows */
+  padding-right: 8px;
+  width: 100%;
+  text-align: left;
+  scrollbar-width: thin;   /* Firefox */
+}
+
+.review-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.review-text::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.review-name {
+  font-weight: 600;
+  color: #444;
+  margin-top: auto; /* Push to bottom if text scrolls */
+}
+
+.reviews-button {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.reviews-button:hover {
+  background-color: #444;
+}
+

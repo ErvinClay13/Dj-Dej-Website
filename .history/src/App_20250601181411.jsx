@@ -4,7 +4,7 @@ import ContactMe from "./components/ContactMe";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
-import Reviews from "./components/DjDejReviews";
+import Dj
 import "./App.css";
 
 const App = () => {
@@ -36,7 +36,6 @@ const App = () => {
   <li><a href="#mixes" onClick={() => setShowMenu(false)}>Mixes</a></li>
   <li><a href="#events" onClick={() => setShowMenu(false)}>Events</a></li>
   <li><a href="#gallery" onClick={() => setShowMenu(false)}>Gallery</a></li>
-  <li><a href="#reviews" onClick={() => setShowMenu(false)}>Reviews</a></li>
   <li><a href="#contact" onClick={() => setShowMenu(false)}>Book Me</a></li>
 </ul>
 
@@ -146,11 +145,6 @@ const App = () => {
       {/* Gallery Section */}
       <div id="gallery">
         <Gallery />
-      </div>
-
-      {/* Review Section */}
-      <div id="reviews">
-        <Reviews />
       </div>
 
       {/* Contact Section */}
