@@ -23,9 +23,8 @@ function ContactMe() {
 
   const [emailText] = useTypewriter({
     words: [
-      "Please Provide Me Your Email",
-      "Enter Your Email Here Please",
-      "Your Email Goes In THis Section"
+      "Please Provide Me YoEmail",
+
     ],
     loop: true,
     typeSpeed: 100,

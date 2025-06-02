@@ -22,11 +22,7 @@ function ContactMe() {
   });
 
   const [emailText] = useTypewriter({
-    words: [
-      "Please Provide Me Your Email",
-      "Enter Your Email Here Please",
-      "Your Email Goes In THis Section"
-    ],
+    words: ["Email"],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -40,7 +36,7 @@ function ContactMe() {
     "What's the vibe you're going for?",
   ],
   loop: true,
-  typeSpeed: 100,
+  typeSpeed: 50,
   deleteSpeed: 50,
   delaySpeed: 2000,
 });

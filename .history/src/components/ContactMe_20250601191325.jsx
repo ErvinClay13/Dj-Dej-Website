@@ -10,11 +10,7 @@ function ContactMe() {
 
   // Typewriter placeholders
   const [firstNameText] = useTypewriter({
-    words: [
-      "Please enter your First Name",
-      "Your First Name Goes Here!",
-      "May I Have Your First Name"
-    ],
+    words: ["First Name"],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -22,11 +18,7 @@ function ContactMe() {
   });
 
   const [emailText] = useTypewriter({
-    words: [
-      "Please Provide Me Your Email",
-      "Enter Your Email Here Please",
-      "Your Email Goes In THis Section"
-    ],
+    words: ["Email"],
     loop: true,
     typeSpeed: 100,
     deleteSpeed: 50,
@@ -34,16 +26,13 @@ function ContactMe() {
   });
 
   const [detailsText] = useTypewriter({
-  words: [
-    "Tell me more about your event...",
-    "What should I know to make it perfect?",
-    "What's the vibe you're going for?",
-  ],
-  loop: true,
-  typeSpeed: 100,
-  deleteSpeed: 50,
-  delaySpeed: 2000,
-});
+    words: ["Tell me more about your event..."],
+    loop: true,
+    typeSpeed: 60,
+    deleteSpeed: 40,
+    delaySpeed: 2500,
+  });
+
   const handleRecaptcha = (token) => {
     setVerified(!!token);
   };

@@ -25,7 +25,7 @@ function ContactMe() {
     words: [
       "Please Provide Me Your Email",
       "Enter Your Email Here Please",
-      "Your Email Goes In THis Section"
+      "Your Email Goes In THi"
     ],
     loop: true,
     typeSpeed: 100,
